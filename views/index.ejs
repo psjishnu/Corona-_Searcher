@@ -15,7 +15,7 @@
 <h1 id="mainh">CORONA SEARCHER</h1>
 <form action="\done" method="post">
 <label  >COUNTRY
-<input name="name" placeholder="First letter in Capital" type="text" width="50px;" >
+<input name="name" placeholder="Enter the name of the country" type="text" width="50px;" required="required"/>
 </label>
 <div class="container">
     <div id="ansr">
@@ -23,28 +23,28 @@
     </div>
  <ul>
   <li>
-    <input type="radio" id="f-option" name="selector" value="deaths">
+    <input type="radio" id="f-option" name="selector" value="deaths" required="required"/>
     <label for="f-option">Deaths</label>
     
     <div class="check"></div>
   </li>
   
   <li>
-    <input type="radio" id="s-option" name="selector" value="confirmed">
+    <input type="radio" id="s-option" name="selector" value="confirmed"/>
     <label for="s-option">Confirmed Cases</label>
     
     <div class="check"><div class="inside"></div></div>
   </li>
   
   <li>
-    <input type="radio" id="t-option" name="selector" value="recovered">
+    <input type="radio" id="t-option" name="selector" value="recovered"/>
     <label for="t-option">Recovered</label>
     
     <div class="check"><div class="inside"></div></div>
   </li>
 </ul>
 </div>
-<input id="submit" type="submit" value="SEARCH">
+<input id="submit" type="submit" value="SEARCH"/>
 </form>
 </div>
 </body>

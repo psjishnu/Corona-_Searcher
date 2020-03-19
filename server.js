@@ -24,6 +24,7 @@ app.post('/done',urlencodedParser ,function(req,res){
 		var qtn = req.body.selector;
 		var URL = "https://coronavirus-tracker-api.herokuapp.com/x1";
 		URL=URL.replace("x1",qtn);
+		country = country.toLowerCase();
 	request({
 		uri: URL ,
 	  }, function(error, response, body) {
@@ -34,10 +35,11 @@ app.post('/done',urlencodedParser ,function(req,res){
 			var leng = body.length;
 			var clen = country.length;
 			var sum=0;
+			
 			for(i=0;i<leng;i++){
-				if(body[i]==country[0]){
+				if(country[0]==body[i].toLowerCase()){
 					j=i;
-					if(body.substring(j,j+clen)==country  && body[j+clen]=='\"'  && body[j-1]=='\"' ) {
+					if((body.substring(j,j+clen)).toLowerCase()==country  && body[j+clen]=='\"'  && body[j-1]=='\"' ) {
 						for(i1=i;i1<leng;i1++){
 							if(body[i1]=='l'){
 								j1=i1
