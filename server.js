@@ -20,8 +20,8 @@ app.get('/', function(req, res) {
 		  res.render('index',{result:""});
 });
 app.post('/done',urlencodedParser ,function(req,res){
-		var country = req.body.ctry;
-		var qtn = req.body.opt;
+		var country = req.body.name;
+		var qtn = req.body.selector;
 		var URL = "https://coronavirus-tracker-api.herokuapp.com/x1";
 		URL=URL.replace("x1",qtn);
 	request({
