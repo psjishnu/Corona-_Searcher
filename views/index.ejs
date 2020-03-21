@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Corona Search</title>
-<!-----Including CSS for different screen sizes----->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="responsiveform.css">
 <link rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 601px)" href="responsiveform1.css" />
 <link rel="stylesheet" media="screen and (max-width: 600px) and (min-width: 351px)" href="responsiveform2.css" />
 <link rel="stylesheet" media="screen and (max-width: 350px)" href="responsiveform3.css" />
-<link rel="stylesheet" href="new.css" type="text/css">    
+<link rel="stylesheet" href="new.css" type="text/css"> 
 
 </head>
-<body>
-<div id="envelope">
-<h1 id="mainh">CORONA SEARCHER</h1>
-<form action="\done" method="post">
-<label  >COUNTRY
-<input name="name" placeholder="Enter the name of the country" type="text" width="50px;" required="required"/>
-</label>
-<div class="container">
-    <div id="ansr">
-		<p><%= result%></p>
-    </div>
- <ul>
-  <li>
-    <input type="radio" id="f-option" name="selector" value="deaths" required="required"/>
-    <label for="f-option">Deaths</label>
-    
-    <div class="check"></div>
-  </li>
-  
-  <li>
-    <input type="radio" id="s-option" name="selector" value="confirmed"/>
-    <label for="s-option">Confirmed Cases</label>
-    
-    <div class="check"><div class="inside"></div></div>
-  </li>
-  
-  <li>
-    <input type="radio" id="t-option" name="selector" value="recovered"/>
-    <label for="t-option">Recovered</label>
-    
-    <div class="check"><div class="inside"></div></div>
-  </li>
-</ul>
+<body style="font-family:Cursive;">
+
+<div style="padding:15px;">
+  <h1>CORONA SEARCHER</h1>
 </div>
-<input id="submit" type="submit" value="SEARCH"/>
-</form>
+
+<div style="overflow:auto">
+
+  <div class="menu">
+    <div  id="menuitem2">
+      <p><%= result %></p>
+    </div>
+    <form action="\done" method="POST">
+      <ul>
+        <div class="menuitem">
+          <input type="text" name="name"  required="required">
+        </div>
+    <div class="menuitem">
+            <li>
+              <input type="radio" id="f-option" name="selector" value="deaths" required="required"/>
+              <label for="f-option">Deaths</label>
+              
+              <div class="check"></div>
+            </li>
+    </div>
+    <div class="menuitem">
+        <li>
+            <input type="radio" id="s-option" name="selector" value="confirmed"/>
+            <label for="s-option">Confirmed</label>
+            
+            <div class="check"><div class="inside"></div></div>
+          </li>
+    </div>
+    <div class="menuitem">
+        <li>
+            <input type="radio" id="t-option" name="selector" value="recovered"/>
+            <label for="t-option">Recovered</label>
+            
+            <div class="check"><div class="inside"></div></div>
+          </li>
+    </div>
+        <div class="menuitem">
+        <li>
+          <input id="submit" type="submit" value="SEARCH"/>
+          </li>
+         </div>
+    </ul>
+    </form>
+  </div>
+
 </div>
 </body>
 </html>
