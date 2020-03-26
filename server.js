@@ -67,7 +67,7 @@ app.post('/done',urlencodedParser ,function(req,res){
 			}
 			if(qtn=="recovered")
 			{
-				msg=sum+" people have been recoverd from Corona in "+country;
+				msg=sum+" people have been recovered from Corona in "+country;
 			}
 
 			res.render('index',{result:msg});
