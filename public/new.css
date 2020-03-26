@@ -260,3 +260,11 @@ body{
     width: 100%;
   }
 }
+::placeholder {
+  color: blue;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+#tb{
+  border-radius: 5%;
+}
