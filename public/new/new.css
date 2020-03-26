@@ -153,21 +153,8 @@ by the way it is so weird when you look at your code a couple of years after you
 	color: #333;
 }
 
-.alert h2 {
-	font-size: 22px;
-	color: #232323;
-	margin-top: 0;
-}
 
-.alert p {
-	line-height: 1.6em;
-	font-size:18px;
-}
 
-.alert a {
-	color: #232323;
-	font-weight: bold;
-}
 label{
     color: white;
     font-size: 20px;
