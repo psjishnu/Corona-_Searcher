@@ -1,64 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="responsiveform.css">
-<link rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 601px)" href="responsiveform1.css" />
-<link rel="stylesheet" media="screen and (max-width: 600px) and (min-width: 351px)" href="responsiveform2.css" />
-<link rel="stylesheet" media="screen and (max-width: 350px)" href="responsiveform3.css" />
-<link rel="stylesheet" href="new.css" type="text/css"> 
-<title>Corona Searcher</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="responsiveform.css">
+<link rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 601px)" href="new/responsiveform1.css" />
+<link rel="stylesheet" media="screen and (max-width: 600px) and (min-width: 351px)" href="new/responsiveform2.css" />
+<link rel="stylesheet" media="screen and (max-width: 350px)" href="new/responsiveform3.css" />
+<link rel="stylesheet" href="new/new.css" type="text/css"> 
+<style>
+    .container{
+    max-width: 500px;
+}
+</style>
 </head>
-<body style="font-family:Cursive;">
+<body>
 
-<div style="padding:3%;">
-  <h1>CORONA SEARCHER</h1>
-</div>
-<br><br>
-<div style="overflow:auto">
-
-  <div class="menu">
-    <div  id="menuitem2">
-      <p><%= result %></p>
+<div class="container" >
+  <br>
+  <h2>CORONA SEARCHER</h2>
+  <div id="ansr" class="form-group">
+    <p><%= result%></p>
+</div><br><br>
+  <form style="border-radius:10px; background-color: darkgreen;" action="\done" method="POST">
+    <div  class="form-group">
+      <label for="email">Country:</label>
+      <input type="name" class="form-control"  placeholder="Enter Country" name="name" required="required">
     </div>
-    <form action="\done" method="POST">
-      <ul>
-        <div class="menuitem">
-          <input type="text" name="name" id="tb" placeholder="Enter the COUNTRY" required="required">
-        </div>
-    <div class="menuitem">
-            <li>
-              <input type="radio" id="f-option" name="selector" value="deaths" required="required"/>
-              <label for="f-option">Deaths</label>
-              
-              <div class="check"></div>
-            </li>
-    </div>
-    <div class="menuitem">
-        <li>
-            <input type="radio" id="s-option" name="selector" value="confirmed"/>
-            <label for="s-option">Confirmed</label>
-            
-            <div class="check"><div class="inside"></div></div>
-          </li>
-    </div>
-    <div class="menuitem">
-        <li>
-            <input type="radio" id="t-option" name="selector" value="recovered"/>
-            <label for="t-option">Recovered</label>
-            
-            <div class="check"><div class="inside"></div></div>
-          </li>
-    </div>
-        <div class="menuitem">
-        <li>
-          <input id="submit" type="submit" value="SEARCH"/>
-          </li>
-         </div>
+    <div class="form-group">
+     <ul>
+      <li>
+        <input type="radio" id="f-option" name="selector" value="deaths" required="required"/>
+        <label for="f-option">Deaths</label>
+        
+        <div class="check"></div>
+      </li>
+      
+      <li>
+        <input type="radio" id="s-option" name="selector" value="confirmed"/>
+        <label for="s-option">Confirmed Cases</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+      
+      <li>
+        <input type="radio" id="t-option" name="selector" value="recovered"/>
+        <label for="t-option">Recovered</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
     </ul>
-    </form>
-  </div>
-
 </div>
+
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+
 </body>
 </html>

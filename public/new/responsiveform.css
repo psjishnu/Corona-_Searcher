@@ -1,0 +1,9 @@
+
+#submit:hover
+{
+background-color: darkslategrey;
+}
+
+input[type=text]:focus,textarea:focus {
+border-color: #4697e4;
+}
