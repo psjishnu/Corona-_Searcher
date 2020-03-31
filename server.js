@@ -3,6 +3,8 @@ var app = express();
 var request = require("request");
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
+const fs = require('fs');
+
 
 
 
@@ -35,7 +37,6 @@ app.post('/done',urlencodedParser ,function(req,res){
 			var leng = body.length;
 			var clen = country.length;
 			var sum=0;
-			
 			for(i=0;i<leng;i++){
 				if(country[0]==body[i].toLowerCase()){
 					j=i;
@@ -48,7 +49,7 @@ app.post('/done',urlencodedParser ,function(req,res){
 									while(body[l1]!=','){
 										l1=l1+1;
 									}
-									sum=sum+Number(body.substring(j1+8,l1));
+									sum=sum+Number(body.substring(j1+8,l1-1));
 									break
 								}
 							}
@@ -56,6 +57,7 @@ app.post('/done',urlencodedParser ,function(req,res){
 					}
 				}
 			}
+			console.log(sum);
 			msg="";
 			if(qtn=="deaths")
 			{
