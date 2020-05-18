@@ -5,11 +5,6 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 const fs = require('fs');
 
-
-
-
-
-
 var port = process.env.PORT || 8000;
 
 app.set('view engine', 'ejs');
@@ -17,9 +12,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-
-
-		  res.render('index',{result:""});
+  res.render('index',{result:""});
 });
 app.post('/done',urlencodedParser ,function(req,res){
 		var country = req.body.name;
